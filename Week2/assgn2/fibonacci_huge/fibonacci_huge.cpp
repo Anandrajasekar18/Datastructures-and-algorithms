@@ -65,12 +65,12 @@ long long get_fibonacci_huge_fast(long long n,long long m){
     for (long long i=2;i<=(n%len);i++){
         prev_2=prev_1;
         prev_1=curr;
-        curr=(prev_1+prev_2);
+        curr=(prev_1+prev_2)%m;
        
         
 
     }
-    return (long)curr%m;
+    return curr;
     
 
 }
